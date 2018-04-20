@@ -1,0 +1,30 @@
+/* pages/chooseSite/chooseSite.wxss */
+.site-choose-content {
+  background-color: #F8F8F8;
+  box-sizing: border-box;
+  height: 100%;
+}
+.site-summary {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-top: 1px solid #DDD;
+  padding: 10px 20px;
+  color: #9c9c9c;
+  font-size: 13px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.site-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.tapface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

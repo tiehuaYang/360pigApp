@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="出库单列表导出">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+		<col index="E" width='30em'></col>
+		<col index="F" width='17em'></col>
+		<col index="G" width='17em'></col>
+	</colgroup>
+
+
+	<rowgroup>
+		<row index="title" style="title"></row>
+		<row index="thead" style="header"></row>
+		<row index="tbody" style="body" dataKey="list" isMuti="Y"></row>
+	</rowgroup>
+
+	<title>
+		<tr>
+			<td rowspan="1" colspan="7" value="出库单列表" />
+		</tr>
+	</title>
+
+	<thead>
+
+		<tr height="16px">
+			<td value="单号" colspan="1" align="left" />
+			<td value="日期" colspan="1" align="left" />
+			<td value="类型" colspan="1" align="right" />
+			<td value="商品名" colspan="1" align="right" />
+			<td value="批次号" colspan="1" align="right" />
+			<td value="出库数量" colspan="1" align="right" />
+			<td value="制单人" colspan="1" align="right" />
+
+		</tr>
+
+	</thead>
+	<tbody>
+		<tr>
+			<td type="string" isSub="N" colspan="1" align="left" />
+			<td type="datetime" isnullable="true" colspan="1" align="left" />
+			<td type="string" isSub="N" colspan="1" align="right" />
+			<td type="string" isSub="Y" class="GoodVO" field="GoodsName"
+				colspan="1" align="right" />
+			<td type="string" isSub="Y" class="GoodVO" field="BatchNumber"
+				colspan="1" align="right" />
+			<td type="numeric" format="##0" isnullable="true" isSub="Y" class="GoodVO"
+				field="StorageNum" colspan="1" align="right" />
+			<td type="string" isSub="N" colspan="1" align="right" />
+		</tr>
+	</tbody>
+
+</excel>

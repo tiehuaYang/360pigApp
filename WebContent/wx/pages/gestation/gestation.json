@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchbar": "/components/searchbar/searchbar"
+  },
+  "navigationBarTitleText": "母猪妊娠记录"
+}

@@ -1,0 +1,10 @@
+/* pages/addMaterial/addMaterial.wxss */
+@import '../createSite/createSite.wxss';
+
+.comfirm-btn button.del-btn {
+  margin-top: 10px;
+  background: #e74c3c;
+}
+.delbtn-active {
+  opacity: 0.8;
+}

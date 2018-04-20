@@ -1,0 +1,35 @@
+<!--pages/addSupplier/addSupplier.wxml-->
+<view class='site-content'>
+<view class='input-group-items'>
+  <view class='input-item first'>
+    <text>供应商名称</text>
+    <input id="supplierName" type='text' placeholder="输入供应商名称" value="{{inputData.supplierName}}" focus="true" maxlength='15' bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item'>
+    <text>联系人</text>
+    <input id="contactsName" type='text' placeholder="姓名" value="{{inputData.contactsName}}" bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item'>
+    <text>联系电话</text>
+    <input id="contactsNum" type='number' placeholder="电话号码" value="{{inputData.contactsNum}}" maxlength='11' bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item' bindtap='categoryTap'>
+    <text>供应类别</text>
+    <view class='item-options'>
+      <text class='{{supplierClass.option0 && "actived"}}' data-state='option0'>饲料</text><!--0-->
+      <text class='{{supplierClass.option1 && "actived"}}' data-state='option1'>兽药</text><!--1-->
+      <text class='{{supplierClass.option2 && "actived"}}' data-state='option2'>疫苗</text><!--2-->
+      <text class='{{supplierClass.option3 && "actived"}}' data-state='option3'>精液</text><!--3-->
+      <text class='{{supplierClass.option4 && "actived"}}' data-state='option4'>其他</text><!--4-->
+    </view>
+  </view>
+  <view class='input-item'>
+    <text>备注</text>
+    <input id="remarks" type='text' placeholder="输入备注" value="{{inputData.remarks}}" bindinput="inputHandle"></input>
+  </view>
+</view>
+<view class="comfirm-btn">
+  <button hover-class="btn-active" bindtap='newSupplier'>保存</button>
+  <button hover-class="delbtn-active" bindtap='delSupplier' class="del-btn" wx:if="{{editSupplierId}}">删除</button>
+</view>
+</view>

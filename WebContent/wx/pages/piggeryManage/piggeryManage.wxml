@@ -1,0 +1,10 @@
+<!--pages/piggeryManage/piggeryManage.wxml-->
+<view class="managePage">
+  <button class="setupFrame" bindtap="createPiggery">点击创建猪舍</button>
+  <view class="piggery" wx:for="{{piggeryList}}" wx:for-index="index" wx:for-item="piggeryItem" wx:key="penId">
+    <view class="dorm">
+      <text class="dorm-txt">{{piggeryItem.penName}}</text>
+      <text class="iconfont icon-bianji" bindtap="alterPage" data-index="{{index}}" data-id="{{piggeryItem.penId}}"></text>
+    </view>
+  </view>
+</view>

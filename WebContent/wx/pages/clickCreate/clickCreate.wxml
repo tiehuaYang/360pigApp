@@ -1,0 +1,32 @@
+<!--pages/clickCreate/clickCreate.wxml-->
+<view class="alterPage">
+  
+  <view class="alterContent">
+    <view class="piggeryName">
+      <text class="Name">猪舍名称</text>
+      <input class="Type" placeholder='请输入猪舍名称' value='{{piggeryName}}' bindinput='typeName'></input>
+    </view>
+    <view class="piggeryType">
+      <text class="Name">猪舍类型</text>
+      <view class="Type">
+        <view class="piggery_one" bindtap="clickPiggery">
+          <view class="piggery_personal">{{piggerys[firstPiggery] || firstPiggery}}</view> 
+          <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+        </view>
+        
+        <view class="piggery_box">
+          <view class="piggery_select" hidden="{{selectPiggery}}">
+            <view class="select_one" bindtap="mySelect" data-me="0">分娩舍</view>
+            <view class="select_one" bindtap="mySelect" data-me="1">备孕舍</view>
+            <view class="select_one" bindtap="mySelect" data-me="2">育肥舍</view>
+            <view class="select_one" bindtap="mySelect" data-me="3">公猪舍</view>
+          </view>
+        </view> 
+      </view>
+
+    </view>
+
+    <button class="saveBtn" bindtap="saveAlter">保存</button>
+
+  </view>
+</view>

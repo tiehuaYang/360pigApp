@@ -1,0 +1,71 @@
+<!--pages/pigScreening/pigScreening.wxml-->
+<view class="screening-content" bindtap='genderTap'>
+
+  <view class="data-range">
+    <view class="from-time">
+      <text>从</text>
+      <view class="fromInput">
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+          <view class="picker">
+            <text class="iconfont icon-riqi1"></text> {{dates}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="to-time">
+      <text>到</text>
+      <view class="toInput">
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange2">  
+          <view class="picker">  
+            <text class="iconfont icon-riqi1"></text> {{dates2}}  
+          </view>  
+        </picker> 
+      </view>
+    </view>
+  </view>
+
+  <!--<view class='item-title'>猪只类别</view>
+  <view class='item-options'>
+    <text class='{{genter==0 && "actived"}}' data-gender='0'>母猪</text>
+    <text class='{{genter==1 && "actived"}}' data-gender='1'>公猪</text>
+    <text class='{{genter==2 && "actived"}}' data-gender='2'>仔猪</text>
+  </view>
+  <view class='item-title'>是否在场</view>
+  <view class='item-options'>
+    <text class='{{isin==1 && "actived"}}' data-isin='1'>在场</text>
+    <text class='{{isin==0 && "actived"}}' data-isin='0'>不在场</text>
+  </view>
+  <view class='item-title'>猪只状态</view>
+  <view class='item-options'>
+    <text class='{{pigState.hasChild && "actived"}}' data-state='hasChild'>怀孕</text>
+    <text class='{{pigState.breastfeeding && "actived"}}' data-state='breastfeeding'>哺乳</text>
+    <text class='{{pigState.breakChild && "actived"}}' data-state='breakChild'>空怀</text>
+    <text class='{{pigState.backup && "actived"}}' data-state='backup'>后备</text>
+  </view>
+  <view class='item-title'>品种</view>
+  <view class='item-options'>
+    <text class='{{varieties.changbai && "actived"}}' data-variet='changbai'>长白</text>
+    <text class='{{varieties.dabai && "actived"}}' data-variet='dabai'>大白</text>
+    <text class='{{varieties.eryuan && "actived"}}' data-variet='eryuan'>二元</text>
+    <text class='{{varieties.dulk && "actived"}}' data-variet='dulk'>杜洛克</text>
+  </view>
+  <view class='item-title'>胎次</view>
+  <view class='input-group'>
+    <input value='{{parityMin}}' type='number' bindinput="parityMinInput"></input>
+    <text>-</text>
+    <input value='{{parityMax}}' type='number' bindinput="parityMaxInput"></input>
+  </view>-->
+  <view class='item-title'>猪舍</view>
+  <view class='picker-view'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='btn-group-foot'>
+    <button class='comfirm' bindtap='comfirm'>确认</button>
+    <button class='resetting' bindtap='comfirm'>重置</button>
+    <button class='cancel' bindtap='cancel'>取消</button>
+  </view>
+</view>

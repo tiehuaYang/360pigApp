@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="库存列表导出">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+		<col index="E" width='17em'></col>
+		<col index="F" width='17em'></col>
+		<col index="G" width='17em'></col>
+
+	</colgroup>
+	<rowgroup>
+		<row index="title" style="title"></row>
+		<row index="thead" style="header"></row>
+		<row index="tbody" style="body" dataKey="list"></row>
+
+	</rowgroup>
+	<title>
+		<tr height="16px">
+			<td rowspan="1" colspan="7" value="库存列表" />
+		</tr>
+	</title>
+	<thead>
+		<tr height="16px">
+			<td value="编码" colspan="1" />
+			<td value="商品" colspan="1" />
+			<td value="单位" colspan="1" />
+			<td value="库存上限" colspan="1" />
+			<td value="库存下限" colspan="1" />
+			<td value="库存数量" colspan="1" />
+			<td value="存放仓库" colspan="1" />
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="16px" firstrow="2" firstcol="0" repeat="5">
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+		</tr>
+	</tbody>
+</excel>

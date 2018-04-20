@@ -1,0 +1,74 @@
+/* pages/deathAdd/deathAdd.wxss */
+.deathAdd-page {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.1);
+  box-sizing: border-box;
+}
+.deathAdd-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deathAdd-col {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.deathAdd-col text {
+  color: rgba(0,0,0,.5);
+  font-weight: bold;
+  padding-right: 5px;
+  height: 38px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+}
+.deathAdd-col input, .deathAdd-data, .check-data, .deathAdd-type, .location {
+  width: 280px;
+  height: 38px;
+  background-color: #FFF;
+  border-radius: 5px;
+}
+.operate-btn {
+  width: 90%;
+  margin: 40px auto;
+  
+}
+.save-btn, .cancel-btn, .delete-btn  {
+  padding: 3px;
+  font-size: 16px;
+}
+.save-btn {
+  background-color: #34917e;
+  color: #FFF;
+}
+.cancel-btn {
+  margin-top: 20px;
+  border: 1px solid #34917e;
+  color: #34917e;
+}
+.delete-btn {
+  margin-top: 20px;
+  border: 1px solid maroon;
+  color: maroon;
+}
+.picker {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 10px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+}
+.icon-jiantou2 {
+  font-size: 14px;
+  padding-left: 4px;
+  color: #34917e;
+}
+.location text {
+  float: right;
+  line-height: 38px;
+}

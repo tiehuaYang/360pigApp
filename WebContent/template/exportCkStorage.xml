@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="盘点记录列表导出">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+
+	</colgroup>
+	<rowgroup>
+		<row index="title" style="title"></row>
+		<row index="thead" style="header"></row>
+		<row index="tbody" style="body" dataKey="list"></row>
+
+	</rowgroup>
+	<title>
+		<tr height="16px">
+			<td rowspan="1" colspan="4" value="盘点记录列表" />
+		</tr>
+	</title>
+	<thead>
+		<tr height="16px">
+			<td value="单号" colspan="1" />
+			<td value="日期" colspan="1" />
+			<td value="类型" colspan="1" />
+			<td value="制单人" colspan="1" />
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="16px" firstrow="2" firstcol="0" repeat="5">
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" colspan="1" />
+		</tr>
+	</tbody>
+</excel>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="订单信息导入">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+		<col index="E" width='17em'></col>
+		<col index="F" width='17em'></col>
+		<col index="G" width='17em'></col>
+		<col index="H" width='17em'></col>
+		<col index="I" width='17em'></col>
+		<col index="J" width='17em'></col>
+		<col index="K" width='17em'></col>
+		<col index="L" width='17em'></col>
+		<col index="M" width='17em'></col>
+		<col index="N" width='17em'></col>
+		<col index="O" width='17em'></col>
+		<col index="P" width='17em'></col>
+		<col index="Q" width='17em'></col>
+		<col index="R" width='17em'></col>
+		<col index="S" width='17em'></col>
+		<col index="T" width='17em'></col>
+		<col index="U" width='17em'></col>
+		<col index="V" width='17em'></col>
+		<col index="W" width='17em'></col>
+		<col index="X" width='17em'></col>
+		<col index="Y" width='17em'></col>
+		<col index="Z" width='17em'></col>
+		<col index="AA" width='17em'></col>
+		<col index="AB" width='17em'></col>
+		<col index="AC" width='17em'></col>
+		<col index="AD" width='17em'></col>
+		<col index="AE" width='17em'></col>
+		<col index="AF" width='17em'></col>
+		<col index="AG" width='17em'></col>
+		<col index="AH" width='17em'></col>
+		<col index="AI" width='17em'></col>
+	</colgroup>
+	<title>
+		<tr height="16px">
+			<td rowspan="1" colspan="12" value="模版说明" />
+		</tr>
+	</title>
+	<thead>
+		<tr height="16px">
+			<th value="客户名称" />
+			<th value="下单日期" />
+			<th value="收货联系人" />
+			<th value="收货联系电话" />
+			<th value="收货地址-省" />
+			<th value="收货地址-市" />
+			<th value="具体收货地址" />
+			<th value="订单编码" />
+			<th value="商品编码" />
+			<th value="商品名称" />
+			<th value="商品单价" />
+			<th value="商品数量" />
+			<th value="实收金额" />
+			<th value="订单备注" />
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="16px" firstrow="2" firstcol="0" repeat="5">
+			<td type="string" isnullable="true" />
+			<td type="datetime" isnullable="true" />
+			<td type="string" isnullable="false" />
+			<td type="numeric" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="numeric" isnullable="true" />
+			<td type="numeric" isnullable="true" />
+			<td type="numeric" isnullable="true" />
+			<td type="string" isnullable="true" />
+		</tr>
+	</tbody>
+</excel>

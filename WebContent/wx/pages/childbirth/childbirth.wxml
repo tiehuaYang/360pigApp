@@ -1,0 +1,89 @@
+<!--pages/breeding/breeding.wxml-->
+<view class="breeding-page">
+  <!--<view class="tip-msg">
+    <text>配种后默认妊娠，无需再填写记录</text>
+  </view>-->
+  <view class="breeding-msg">
+    <view class="breeding-col">
+      <text>母猪耳号</text>
+      <input placeholder='请输入母猪耳号'></input>
+    </view>
+    <view class="breeding-col">
+      <text>配种日期</text>
+      <view class="breeding-data">
+
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+          <view class="picker">
+            <text class="iconfont icon-riqi1"></text> {{dates}}
+          </view>
+        </picker>
+
+      </view>
+    </view>
+    <!--<view class="breeding-col">
+        <text>查情日期</text>
+        <view class="check-data">
+          <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange2">  
+            <view class="picker">  
+              <text class="iconfont icon-riqi1"></text> {{dates2}}  
+            </view>  
+          </picker> 
+        </view>
+     </view>-->
+    <view class="breeding-col">
+      <text>所在位置</text>
+      <view class="location">
+        <picker mode="selector" range="{{array}}" value="{{location}}" bindchange="listenerPickerSelected">
+          <text>{{array[location]}}<text class="iconfont icon-jiantou2"></text></text>
+        </picker>
+      </view>
+
+    </view>
+    <!--<view class="breeding-col">
+       <text>配种精液</text>
+       <input></input>
+     </view>-->
+    <view class="breeding-col">
+      <text>一配精液</text>
+      <view class="breeding-type">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" mode="selector">
+          <view class="picker">
+            {{objectArray[index]}}
+            <text class="iconfont icon-jiantou2"></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="breeding-col">
+      <text>二配公猪</text>
+      <view class="breeding-type">
+        <picker bindchange="listenerPickerChange" value="{{boar}}" range="{{boarArray}}" mode="selector">
+          <view class="picker">
+            {{boarArray[boar]}}
+            <text class="iconfont icon-jiantou2"></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="breeding-col">
+      <text>三配公猪</text>
+      <view class="breeding-type">
+        <picker bindchange="listenerPickerChange2" value="{{boar2}}" range="{{boar2Array}}" mode="selector">
+          <view class="picker">
+            {{boar2Array[boar2]}}
+            <text class="iconfont icon-jiantou2"></text>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="breeding-col">
+      <text>备注信息</text>
+      <input placeholder='暂无备注事项！' class="remark-txt"></input>
+    </view>
+  </view>
+  <view class="operate-btn">
+    <button class="save-btn">保存</button>
+    <button class="cancel-btn">取消</button>
+    <button class="delete-btn">删除</button>
+  </view>
+</view>

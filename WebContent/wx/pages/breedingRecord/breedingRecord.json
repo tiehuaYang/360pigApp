@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchpigs": "/components/searchpigs/searchpigs"
+  },
+  "navigationBarTitleText": "母猪配种记录"
+}

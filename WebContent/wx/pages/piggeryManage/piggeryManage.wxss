@@ -1,0 +1,51 @@
+/* pages/piggeryManage/piggeryManage.wxss */
+.managePage {
+  background-color: #F8F8F8;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px; 
+  box-sizing: border-box;
+}
+.manageHead {
+  width: 100%;
+  height: 40px;
+  background-color: #FFF;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.headTxt {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #34917e;
+}
+.setupFrame {
+  font-size: 14px;
+  background-color: #34917e;
+  color: #FFF;
+  margin-bottom: 10px;
+  width: 90%;
+  border: none;
+}
+.piggery {
+  background-color: #FFF;
+  
+  display: flex;
+  flex-direction: column;
+}
+.dorm {
+  
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.dorm-txt {
+  float: left;
+  padding-left: 5%;
+}
+.icon-bianji {
+  padding-right: 5%;
+  float: right;
+  font-size:25px;
+  color: #34917e;
+  opacity: .8;
+}

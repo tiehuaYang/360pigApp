@@ -1,0 +1,187 @@
+/**index.wxss**/
+/*.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto {
+  margin-top: 80px;
+  font-size: 28px;
+  color: #000;
+  width: 100%;
+}
+.index-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.logo-pic {
+  width: 100%;
+  height: 200px;
+}
+.parent {
+  width: 100%;
+  height: 200px;
+}
+.logo-img {
+  position: relative;
+  left: -50%;
+  margin-top: -80%;
+  white-space: nowrap;
+  width: 100px;
+  height: 100px;
+}
+.wrapper {
+  float: left;
+  position: relative;
+  left: 50%;
+  clear: both;
+}
+.system-title, .username, .password, .username-frame, .password-frame, .login {
+  position: relative;
+  left: -50%;
+  white-space: nowrap;
+}
+.username-frame, .password-frame {
+  padding: 0 10px;
+}
+.system-title {
+  font-size: 28px;
+  color: #368a7b;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.username, .password {
+  font-size: 16px;
+  color: #000;
+  position: absolute;
+  top: 40px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+.password {
+  top: 25px !important;
+}
+.username-frame, .password-frame {
+  width: 180px;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,.5);
+  margin-left: 50px;
+  margin-top: 35px;
+  font-size: 16px;
+  color: #000;
+}
+.password-frame {
+  margin-top: 20px !important;
+}
+.login {
+  font-size: 16px;
+  color: #79BFF2;
+  position: absolute;
+  top: 10px;
+}
+*/
+.wrapper {
+  width: 100%;
+}
+.logo-pic {
+  margin-top: -20%;
+}
+.wrapper, .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-img {
+  width: 100px;
+  height: 100px;
+}
+.logo-txt {
+  font-size: 15px;
+  font-weight: bold;
+  color: #368a7b;
+  margin-top: 5px;
+}
+.login-wrapper {
+  width: 94%;
+  height: 350px;
+  background-color: #69b7a9;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.wrapper-user, .wrapper-psd {
+  padding: 5px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper-user {
+  margin-top: 25px;
+}
+.wrapper-psd {
+  margin-top: 12px;
+}
+.username-frame, .password-frame {
+  padding-left: 20px;
+  color: rgba(0,0,0,.5);
+}
+#username, #password {
+  padding-left: 30px;
+
+  color: rgba(0,0,0,.3);
+}
+.wrapper-radio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.remebePsd {
+  width: 50%;
+  color: #fff;
+  text-align: left;
+  margin-left: 4%;
+  font-size: 20px;
+  transform: scale(0.7);
+}
+.forgetPsd {
+  width: 50%;
+  text-align: right;
+  margin-right: 9%;
+  color: #fff;
+}
+.wrapper-btn {
+  width: 80%;
+}
+.login-btn {
+  background-color: #34917f;
+  border: none !important;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 2px;
+  margin-top: 30px;
+}
+.contact-me {
+  font-size: 14px;
+  color: #69b7a9;
+  font-weight: bold;
+  padding: 2px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}

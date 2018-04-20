@@ -1,0 +1,15 @@
+<!--pages/supplierManage/supplierManage.wxml-->
+<view class='supplier-content'>
+  <view class="pigs-section1">
+    <searchbar class="searchbar" id="searchbar" placeholder="搜索" bind:searchHandleEvent="_searchSupplier"></searchbar>
+    <view class='top-btn-group'>
+      <button class="add-btn" bindtap='addSupplier'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+  <view class="piggery" wx:for="{{supplierList}}" wx:for-index="index" wx:for-item="supplierItem" wx:key="supplierId">
+    <view class="dorm">
+      <text class="dorm-txt">{{supplierItem.supplierName}}</text>
+      <text class="iconfont icon-bianji" bindtap="editSupplier" data-index="{{index}}" data-id="{{supplierItem.supplierId}}"></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/materialManage/materialManage.wxml-->
+<view class="page__bd">
+  <view class="pigs-section1">
+    <searchbar class="searchbar" id="searchbar" placeholder="搜索" bind:searchHandleEvent="_searchMaterial"></searchbar>
+    <view class='top-btn-group'>
+      <button class="add-btn" bindtap='addMaterial'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{materType == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+          </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+      </view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="material-list" wx:for="{{materialList}}" wx:for-item="item" wx:key="goodId" data-materid="{{item.goodId}}" catchtap='editMaterial'>
+        <text class="material-name">{{item.goodName}}</text>
+        <view class='material-r'>
+          <text class='material-state' data-materid="{{item.goodId}}">
+            <text>{{materType ==  0 ? "饲料阶段：":materType ==  1 ?"猪只类型：":"供应商："}}</text>{{materType ==  0 ? stageORType[item.stage]:materType ==  1 ?pigType[item.pigType]:item.supplierVO.supplierName}}
+          </text>
+          <text class='material-phase' data-materid="{{item.goodId}}"><text>使用状态：</text>{{item.isUsing=='Y'?'在用':'停用'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

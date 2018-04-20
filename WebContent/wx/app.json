@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/entering/entering",
+    "pages/index/index",
+    "pages/addMaterial/addMaterial",
+    "pages/addPig/addPig",
+    "pages/addSupplier/addSupplier",
+    "pages/alterPiggery/alterPiggery",
+    "pages/breeding/breeding",
+    "pages/breedingRecord/breedingRecord",
+    "pages/chooseSite/chooseSite",
+    "pages/clickCreate/clickCreate",
+    "pages/createSite/createSite",
+    "pages/deathAdd/deathAdd",
+    "pages/deathRecord/deathRecord",
+    "pages/gestation/gestation",
+    "pages/materialManage/materialManage",
+    "pages/pigScreening/pigScreening",
+    "pages/piggeryManage/piggeryManage",
+    "pages/pigs/pigs",
+    "pages/setting/setting",
+    "pages/siteManage/siteManage",
+    "pages/staging/staging",
+    "pages/supplierManage/supplierManage",
+    "pages/logoPage/logoPage",
+    "pages/childbirth/childbirth",
+    "pages/childbirthRecord/childbirthRecord"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "农牧快车",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#34917e",
+    "list": [
+      {
+        "pagePath": "pages/entering/entering",
+        "text": "录入",
+        "iconPath": "images/icon__0003.png",
+        "selectedIconPath": "images/icon2__0003.png"
+      },
+      {
+        "pagePath": "pages/pigs/pigs",
+        "text": "猪只",
+        "iconPath": "images/icon__0001.png",
+        "selectedIconPath": "images/icon2__0001.png"
+      },
+      {
+        "pagePath": "pages/staging/staging",
+        "text": "工作台",
+        "iconPath": "images/icon__0002.png",
+        "selectedIconPath": "images/icon2__0002.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "images/react_on.png",
+        "selectedIconPath": "images/react.png"
+      }
+    ]
+  }
+}

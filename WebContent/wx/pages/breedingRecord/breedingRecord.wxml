@@ -1,0 +1,40 @@
+<!--pages/breedingRecord/breedingRecord.wxml-->
+<view class="breedingRecord-page">
+  <view class="pigs-section1">
+    <searchpigs class="searchpigs" id="searchpigs" bind:searchHandleEvent="_searchPigs"></searchpigs>
+    <view class='top-btn-group'>
+      <button class="filter-btn" bindtap='pigScreen'><text class="iconfont icon-shaixuan1"></text>筛选</button>
+      <button class="add-btn" bindtap='breeding'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+
+  <view class="deliver-total">
+    <view class="extra-msg">
+      <text class="left-txt">母猪配种汇总:</text>
+      <text class="right-txt">2018-03-20至2018-04-20</text>
+    </view>
+    <view class="extra-txt">
+      <text>分娩6窝，总仔数量30只，其中健仔30只，弱仔0只，畸形0只，死胎0只，木乃伊0只，总仔12只</text>
+    </view>
+  </view>
+
+  <view class="breeding-detail">
+    <view class="breeding-msg">
+      <view class="breeding-txt">
+        <view class="breeding-left">
+          <text>耳号：BIGPIG1002</text>
+          <text>配种舍：30栋02舍</text>
+          <text>液精：AK47KSJDJ</text>
+        </view>
+        <view class="breeding-right">
+          <text class="date-txt">日期：2018-04-20</text>
+        </view>
+      </view>
+      <view class="breeding-btn" bindtap="breeding">
+        <view class="btn-txt">
+          <text class="iconfont icon-bianji1"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

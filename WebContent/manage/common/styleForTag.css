@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+
+.btnx {
+	color: #488c6c;
+	background-color: #eee;
+	display: inline-block; /* inline模式*/
+	padding: 6px 12px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer; /* 手形图标 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px; /* 边框 */
+	border-color: #444;
+	border-radius: 4px; /* 圆角*/
+}
+
+.btnx:hover {
+	
+}
+
+.btnx-default { /* 定义default风格相关的颜色 */
+	color: #fff;
+	background-color: #488c6c;
+	border-color: #488c6c;
+}
+
+.btnx-default:hover {
+	
+}
+
+.btnx-default:focus,.btnx-default:active,.btnx-default.active,.open .dropdown-toggle.btnx-default
+	{ /* focus、active变化时的颜色 */
+	color: #fff;
+	background-color: #488c6c;
+	border-color: #488c6c;
+}
+
+.btnx-defaultx:active,.btnx-defaultx.active,.open .dropdown-toggle.btnx-default
+	{ /* active状态下,背景图设置为none */
+	background-color: #488c6c;
+}
+
+.btnx-default.disabled,.btnx-default[disabled], /* 此处省略部分选择符 */
+	.btnx-default[disabled].active,fieldset[disabled] .btnx-default.active
+	{ /* 禁用状态下,各种变化时的颜色 */
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btnx-default .badge { /* 按钮内部有徽章的话,设置徽章的显示颜色和背景色 */
+	color: #fff;
+	background-color: #333;
+}

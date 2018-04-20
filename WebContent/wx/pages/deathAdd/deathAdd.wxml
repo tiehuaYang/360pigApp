@@ -1,0 +1,57 @@
+<!--pages/deathAdd/deathAdd.wxml-->
+<view class="deathAdd-page">
+  <view class="deathAdd-msg">
+    <view class="deathAdd-col">
+      <text>母猪耳号</text>
+      <input placeholder='   请输入母猪耳号'></input>
+    </view>
+    <view class="deathAdd-col">
+      <text>离场日期</text>
+      <view class="deathAdd-data">
+
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+          <view class="picker">
+            <text class="iconfont icon-riqi1"></text> {{dates}}
+          </view>
+        </picker>
+
+      </view>
+    </view>
+    <view class="deathAdd-col">
+      <text>所在位置</text>
+      <view class="location">
+        <picker mode="selector" range="{{array}}" value="{{location}}" bindchange="listenerPickerSelected">
+          <text>{{array[location]}}<text class="iconfont icon-jiantou2"></text></text>
+        </picker>
+      </view>
+    </view>
+
+    <view class="deathAdd-col">
+      <text>死淘类型</text>
+      <view class="location">
+        <picker mode="selector" range="{{typeArray}}" value="{{deathType}}" bindchange="deathTypeSelected">
+          <text>{{typeArray[deathType]}}<text class="iconfont icon-jiantou2"></text></text>
+        </picker>
+      </view>
+    </view>
+
+    <view class="deathAdd-col">
+      <text>死淘原因</text>
+      <view class="location">
+        <picker mode="selector" range="{{reasonArray}}" value="{{deathReason}}" bindchange="deathReasonSelected">
+          <text>{{reasonArray[deathReason]}}<text class="iconfont icon-jiantou2"></text></text>
+        </picker>
+      </view>
+    </view>
+
+    <view class="deathAdd-col">
+      <text>备注信息</text>
+      <input placeholder='   暂无备注事项！' class="remark-txt"></input>
+    </view>
+  </view>
+  <view class="operate-btn">
+    <button class="save-btn">保存</button>
+    <button class="cancel-btn">取消</button>
+    <button class="delete-btn">删除</button>
+  </view>
+</view>

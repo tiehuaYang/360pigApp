@@ -1,0 +1,94 @@
+<!--pages/staging/staging.wxml-->
+<!--<view class="staging-page">
+  <view class="deal-task">
+    <view class="dealtask-content">
+      <text class="task-txt">今日待办任务</text>
+      <view class="task-btn">
+        <button size="mini">母猪进场</button>
+        <button size="mini">公猪配种</button>
+        <button size="mini">猪仔销售</button>
+      </view>
+    </view>
+  </view>
+  <view class="current-livestock">
+    <view class="currentlivestock-content">
+      <text class="current-txt">当前存栏</text>
+      <view class="pig-total">
+        <view class="pig-classify">
+          <image src="../../images/pig.png"></image>
+          <view class="classify-txt">
+            <text class="pig-num">1000</text>
+            <text class="pig-type">公猪</text>
+          </view>
+        </view>
+        <view class="pig-classify">
+          <image src="../../images/pig.png"></image>
+          <view class="classify-txt">
+            <text class="pig-num">2000</text>
+            <text class="pig-type">母猪</text>
+          </view>
+        </view>
+        <view class="pig-classify">
+          <image src="../../images/pig.png"></image>
+          <view class="classify-txt">
+            <text class="pig-num">3000</text>
+            <text class="pig-type">猪仔</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>-->
+<view class="staging-page">
+  <view class="deal-today">
+    <view class="deal-content">
+      <view class="deal-msg">
+        <text class="deal-txt">今日待办<text class="iconfont icon-renwu1"></text></text> 
+      </view>
+      <view class="task-show">
+        <view class="row">
+          <text>待配母猪：<text class="num">{{waitMating}}</text>
+          </text>
+          <text>待产母猪：<text class="num">{{waitExpectant}}</text></text>
+        </view>
+        <view class="row">
+          <!-- <text>母猪进场：<text class="num">1000</text></text> -->
+          <!-- <text>断奶母猪：<text class="num">1000</text></text> -->
+        </view>
+        <!--<view class="row2">
+          <text>备注：</text>
+          <input class="remark-msg" placeholder='暂无备注事项!'></input>
+        </view>-->
+      </view>
+    </view>
+  </view>
+
+  <view class="current-storage">
+    <view class="storage-content">
+      <view class="storage-msg">
+        <text class="storage-txt">当前存栏<text class="iconfont icon-dangqianhoutairenwu"></text></text> 
+      </view>
+      <view class="storage-show">
+        <view class="row">
+          <text>母猪：<text class="num">{{femaleNum}}</text>
+          </text>
+          <text>怀孕母猪：<text class="num">{{pregnantNum}}</text></text>
+        </view>
+        <view class="row">
+          <text>公猪：<text class="num">{{maleNum}}</text></text>
+          <!-- <text>哺乳母猪：<text class="num">400</text></text> -->
+          <text>空怀母猪：<text class="num">{{nonpregnancyNum}}</text></text>
+        </view>
+        <view class="row">
+          <text>肉猪：<text class="num">{{porkerNum}}</text></text>
+          <!-- <text>空怀母猪：<text class="num">300</text></text> -->
+        </view>
+        <!--<view class="row2">
+          <text>备注：</text>
+          <input class="remark-msg" placeholder='暂无备注事项!'></input>
+        </view>-->
+      </view>
+    </view>
+  </view>
+
+</view>

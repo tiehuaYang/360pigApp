@@ -1,0 +1,36 @@
+<!--pages/createSite/createSite.wxml-->
+<view class='site-content'>
+<view class='input-group-items'>
+  <view class='input-item first'>
+    <text>猪场名称</text>
+    <input id="farmName" type='text' placeholder="填写名称" value="{{inputData.farmName}}" focus="true" maxlength='15' bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item'>
+    <text>所在省份</text>
+    <picker bindchange="provSelectChange" value="{{provSelected}}" range-key="name" range="{{provinces}}">
+      <view class="picker">{{provinces[provSelected].name}}</view>
+    </picker>
+  </view>
+  <view class='input-item'>
+    <text>猪场类型</text>
+    <picker bindchange="siteTypeChange" value="{{siteTypeIndex}}" range="{{siteType}}">
+      <view class="picker">{{siteType[siteTypeIndex]}}</view>
+    </picker>
+  </view>
+  <view class='input-item'>
+    <text>联系人</text>
+    <input id="farmManager" type='text' placeholder="姓名" value="{{inputData.farmManager}}" bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item'>
+    <text>电话</text>
+    <input id="phoneNum" type='number' placeholder="电话号码" value="{{inputData.phoneNum}}" maxlength='11' bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item'>
+    <text>Email</text>
+    <input id="email" type='text' placeholder="电子邮箱地址" value="{{inputData.email}}" bindinput="inputHandle"></input>
+  </view>
+</view>
+<view class="comfirm-btn">
+  <button hover-class="btn-active" bindtap='newSite'>确定</button>
+</view>
+</view>

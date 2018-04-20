@@ -1,0 +1,40 @@
+<!--pages/siteManage/siteManage.wxml-->
+<view class='site-manage-content'>
+  <view class='site-summary' wx:if="{{hasDefault}}">
+    <text class='site-title'>{{defaultSite.farmName}}</text>
+    <view>
+      <text>{{defaultSite.province}}</text>
+      <text class="farmManager">负责人：{{defaultSite.farmManager}}</text>
+    </view>
+    <text class='iconfont icon-bianji edit-site' bindtap='editSite'></text>
+  </view>
+  <view class='item-content' wx:if="{{hasDefault}}">
+    <view class='item' bindtap='switchSite'>
+      <view>
+        <text class='iconfont icon-qiehuankeshi'></text>
+        <text>切换猪场</text>
+      </view>
+    </view>
+    <view class='item last' bindtap='managePage'>
+      <view>
+        <text class='iconfont icon-homeo'></text>
+        <text>猪舍管理</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='item-content'>
+    <view class='item {{hasDefault?"":"last"}}' bindtap='createSite'>
+      <view>
+        <text class='iconfont icon-xinzengdanwei'></text>
+        <text>新建猪场</text>
+      </view>
+    </view>
+    <view class='item last' bindtap='delSite' wx:if="{{hasDefault}}">
+      <view>
+        <text class='iconfont icon-shanchuxiang'></text>
+        <text>删除猪场</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,390 @@
+<!--pages/addPig/addPig.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+
+       <!-- 公猪tab页 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="boarContent">
+            <!--<view class="boarMsg" bindtap="clickBoar" data-way="0">
+              <view data-way="0">来源方式</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="0">{{boars[firstBoar] || firstBoar}}</view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar0}}" bindtap="mySelect">
+                    <view class="select_one" data-type="0">驻场</view>
+                    <view class="select_one" data-type="1">引入</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>-->
+            <view class="boarMsg">
+              <view>猪耳标号</view>
+              <input placeholder='请输入种猪耳标号' bindinput='getEarTag' value="{{earTagVal}}"></input>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="1">
+              <view data-way="1">品种</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="1">
+                    {{pigCategoryList[secondBoar].categoryName || "选择种猪品种"}}
+
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar1}}" bindtap="mySelect">
+                    <view class="select_one" data-me="{{index}}"  data-id="{{item.categoryId}}" wx:for="{{pigCategoryList}}" wx:for-item="item" wx:key="categoryId">
+                    {{item.categoryName}}
+                    </view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="2">
+              <view>品系</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="2">
+                    {{pigStrainList[threeBoar].strainName || "选择种猪品系"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar2}}" bindtap="mySelect">
+                    <view class="select_one" data-id="{{item.strainId}}" data-rank="{{index}}" wx:for="{{pigStrainList}}" wx:for-item="item" wx:key="strainId">{{item.strainName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>出生日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{date}}" start="1978-01-01" end="{{pigIndate}}" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{date}}
+                    <text class="iconfont icon-riqi1"></text> 
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>入场日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{pigIndate}}" start="1978-01-01" end="{{today}}" bindchange="bindPigInDateChange">
+                  <view class="picker">
+                    {{pigIndate}}
+                    <text class="iconfont icon-riqi1"></text>
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="3">
+              <view>所在舍</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="3">
+                    {{farmVO[fourBoar].penName || "选择种猪所在舍"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar3}}" bindtap="mySelect">
+                    <view class="select_one" data-room="{{index}}" data-id="{{item.penId}}" wx:for="{{farmVO}}" wx:for-item="item" wx:key="penId">{{item.penName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+           <!-- <view class="boarMsg">
+              <view>所在栏</view>
+              <input placeholder='请输入种猪所在栏'></input>
+            </view>-->
+          </view>
+          <view class="boarBtn comfirm-btn">
+            <button class="addBtn" bindtap="saveAdd">保存</button>
+            <button hover-class="delbtn-active" bindtap='delPig' class="del-btn" wx:if="{{pigId}}">删除</button>
+          </view>
+
+        </view>
+
+        <!-- 母猪tab页 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="boarContent">
+            <!--<view class="boarMsg" bindtap="clickBoar" data-way="0">
+              <view data-way="0">来源方式</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="0">{{boars[firstBoar] || firstBoar}}</view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar0}}" bindtap="mySelect">
+                    <view class="select_one" data-type="0">驻场</view>
+                    <view class="select_one" data-type="1">引入</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>-->
+            <view class="boarMsg">
+              <view>猪耳标号</view>
+              <input placeholder='请输入种猪耳标号' bindinput='getEarTag' value="{{earTagVal}}"></input>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="1">
+              <view data-way="1">品种</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="1">
+                    {{pigCategoryList[secondBoar].categoryName || "选择种猪品种"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar1}}" bindtap="mySelect">
+                    <view class="select_one" data-id="{{item.categoryId}}" data-rank="0" data-me="{{index}}" wx:for="{{pigCategoryList}}" wx:for-item="item" wx:key="categoryId">{{item.categoryName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="2">
+              <view>品系</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="2">
+                    {{pigStrainList[threeBoar].strainName || "选择种猪品系"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar2}}" bindtap="mySelect">
+                    <view class="select_one" data-id="{{item.strainId}}" data-rank="{{index}}" wx:for="{{pigStrainList}}" wx:for-item="item" wx:key="strainId">{{item.strainName}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>出生日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{date}}" start="1978-01-01" end="{{pigIndate}}" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{date}}
+                    <text class="iconfont icon-riqi1"></text>
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>入场日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{pigIndate}}" start="1978-01-01" end="{{today}}" bindchange="bindPigInDateChange">
+                  <view class="picker">
+                    {{pigIndate}}
+                    <text class="iconfont icon-riqi1"></text>
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <!--<view class="boarMsg" bindtap="clickBoar" data-way="5">
+              <view>当前胎次</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="5">{{boars6[sixBoar] || sixBoar}}</view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar5}}" bindtap="mySelect">
+                    <view class="select_one" data-parity="0">1</view>
+                    <view class="select_one" data-parity="1">2</view>
+                    <view class="select_one" data-parity="2">3</view>
+                    <view class="select_one" data-parity="3">4</view>
+                  </view>
+                </view>
+
+              </view>
+              
+            </view>-->
+            <view class="boarMsg" bindtap="clickBoar" data-way="3">
+              <view>所在舍</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="3">
+                    {{farmVO[fourBoar].penName || "选择种猪所在舍"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar3}}" bindtap="mySelect">
+                    <view class="select_one" data-room="{{index}}" data-id="{{item.penId}}" 
+                    wx:for="{{farmVO}}" wx:for-item="item" wx:key="penId">{{item.penName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <!--<view class="boarMsg">
+              <view>所在栏</view>
+              <input placeholder='请输入种猪所在栏'></input>
+            </view>-->
+          </view>
+          <view class="boarBtn comfirm-btn">
+            <button class="addBtn" bindtap="saveAdd">保存</button>
+            <button hover-class="delbtn-active" bindtap='delPig' class="del-btn" wx:if="{{pigId}}">删除</button>
+          </view>
+        </view>
+
+        <!-- 仔猪tab页 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="boarContent">
+            <!--<view class="boarMsg" bindtap="clickBoar" data-way="0">
+              <view data-way="0">来源方式</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="0">{{boars[firstBoar] || firstBoar}}</view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar0}}" bindtap="mySelect">
+                    <view class="select_one" data-type="0">驻场</view>
+                    <view class="select_one" data-type="1">引入</view>
+                  </view>
+                </view>
+              </view>
+            </view>-->
+            <view class="boarMsg">
+              <view>猪耳标号</view>
+              <input placeholder='请输入种猪耳标号' bindinput='getEarTag' value="{{earTagVal}}"></input>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="1">
+              <view data-way="1">品种</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="1">
+                    {{pigCategoryList[secondBoar].categoryName || "选择种猪品种"}}
+
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar1}}" bindtap="mySelect">
+                    <view class="select_one" data-id="{{item.categoryId}}" data-me="{{index}}" wx:for="{{pigCategoryList}}" wx:for-item="item" wx:key="categoryId">{{item.categoryName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="2">
+              <view>品系</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="2">
+                    {{pigStrainList[threeBoar].strainName || "选择种猪品系"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar2}}" bindtap="mySelect">
+                    <view class="select_one" data-id="{{item.strainId}}" data-rank="{{index}}" wx:for="{{pigStrainList}}" wx:for-item="item" wx:key="strainId">{{item.strainName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>出生日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{date}}" start="1978-01-01" end="{{pigIndate}}" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{date}}
+                    <text class="iconfont icon-riqi1"></text> 
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="boarMsg">
+              <view>入场日期</view>
+              <view class="section">
+                <view class="section__title"></view>
+                <picker mode="date" value="{{pigIndate}}" start="1978-01-01" end="{{today}}" bindchange="bindPigInDateChange">
+                  <view class="picker">
+                    {{pigIndate}}
+                    <text class="iconfont icon-riqi1"></text>
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="4">
+              <view>性别</view>
+              <view class="Type">
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="4">{{boars5[fiveBoar] || fiveBoar}}</view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar4}}" bindtap="mySelect">
+                    <view class="select_one" data-sex="0">公</view>
+                    <view class="select_one" data-sex="1">母</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="boarMsg" bindtap="clickBoar" data-way="3">
+              <view>所在舍</view>
+              <view class="Type">
+
+                <view class="boar_one">
+                  <view class="boar_personal" data-way="3">
+                    {{farmVO[fourBoar].penName || "选择种猪所在舍"}}
+                  </view>
+                  <text class="iconfont icon-jiantou2" class="{{selectArea ? 'rotateRight' :''}}"></text>
+                </view>
+                <view class="boar_box">
+                  <view class="boar_select" hidden="{{selectBoar3}}" bindtap="mySelect">
+                    <view class="select_one" data-room="{{index}}"  data-id="item.penId" wx:for="{{farmVO}}" wx:for-item="item" wx:key="penId">{{item.penName}}</view>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+            <!--<view class="boarMsg">
+              <view>所在栏</view>
+              <input placeholder='请输入种猪所在栏'></input>
+            </view>-->
+          </view>
+          <view class="boarBtn comfirm-btn">
+            <button class="addBtn" bindtap="saveAdd">保存</button>
+            <button hover-class="delbtn-active" bindtap='delPig' class="del-btn" wx:if="{{pigId}}">删除</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

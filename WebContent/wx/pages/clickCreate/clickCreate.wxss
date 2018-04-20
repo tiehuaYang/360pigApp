@@ -1,0 +1,82 @@
+/* pages/clickCreate/clickCreate.wxss */
+/* pages/alterPiggery/alterPiggery.wxss */
+.alterPage {
+  background-color: #F8F8F8;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.alterContent {
+  width: 100%;
+}
+.piggeryName, .piggeryType {
+  width: 90%;
+  height: 35px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(0,0,0,.1);
+  clear: both;
+}
+.Name {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  color: rgba(0,0,0,.5);
+}
+.Type {
+  float: right;
+  height: 35px;
+  line-height: 35px;
+  padding-right: 10px;
+  text-align: right;
+  color: rgba(0,0,0,.6);
+}
+.saveBtn {
+  width: 90%;
+  margin-top: 20px;
+  background-color: #7BB7ED;
+  font-size: 16px; 
+  color: #FFF;
+}
+.piggery_personal{
+    width: 100%;
+    color:rgba(0,0,0,.6);
+    height: 35px;
+    line-height:35px;
+    float: right;
+    text-align: right;
+}
+.piggery_one{
+    display: flex; 
+    position: relative;
+    justify-content: flex-end;
+    width:100%;
+    height:35px;
+    border-radius: 10rpx;
+    line-height: 35px;
+}
+.piggery_box{
+    position: relative;
+    right: 0;
+}
+.piggery_select{
+    margin-top:0;
+    z-index: 100;
+    position: absolute;
+    right: -10px;
+}
+.select_one{
+    text-align: center;
+    background-color:rgb(239, 239, 239);
+    width:676rpx; 
+    height:35px;
+    line-height:35px;
+    border-bottom:2rpx solid rgb(255, 255, 255);
+}
+.rotateRight{
+    transform: rotate(180deg);
+}

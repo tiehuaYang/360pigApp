@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="商品销售信息导出">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+		<col index="E" width='17em'></col>
+		<col index="F" width='17em'></col>
+		<col index="G" width='17em'></col>
+		<col index="H" width='17em'></col>
+	</colgroup>
+
+
+	<rowgroup>
+		<row index="title" style="title"></row>
+		<row index="thead" style="header"></row>
+		<row index="tbody" style="body" dataKey="countList"></row>
+		<row index="thead1" style="header"></row>
+		<row index="tbody1" style="body" dataKey="list" isMuti="N"></row>
+	</rowgroup>
+
+	<title>
+		<tr height="16px">
+			<td rowspan="1" colspan="8" value="商品库存数据" />
+		</tr>
+	</title>
+
+
+	<thead>
+		<tr height="16px" colspan="1">
+			<td value="盘点仓库" colspan="8" />
+		</tr>
+
+	</thead>
+
+	<tbody>
+		<tr height="16px">
+			<td type="string" isnullable="true" colspan="8" />
+		</tr>
+	</tbody>
+	<thead1>
+
+		<tr height="16px" colspan="1">
+			<td value="商品编码" colspan="1" />
+			<td value="商品名称" colspan="1" />
+			<td value="规格" colspan="1" />
+			<td value="批次号" colspan="1" />
+			<td value="库存上限" colspan="1" />
+			<td value="库存下限" colspan="1" />
+			<td value="库存数量" colspan="1" />
+			<td value="盘点数量" colspan="1" />
+		</tr>
+
+	</thead1>
+	<tbody1>
+		<tr>
+			<td type="string" colspan="1" />
+			<td type="string" colspan="1" />
+			<td type="string" colspan="1" />
+			<td type="string" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+		</tr>
+	</tbody1>
+
+</excel>

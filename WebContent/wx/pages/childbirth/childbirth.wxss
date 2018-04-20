@@ -1,0 +1,89 @@
+/* pages/childbirth/childbirth.wxss */
+/* pages/breeding/breeding.wxss */
+.breeding-page {
+  background-color: rgba(0,0,0,.1);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.tip-msg {
+  width: 100%;
+  height: 40px;
+  background-color: #FFF;
+  border-top: 1px solid rgba(0,0,0,.2);
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  text-align: center;
+}
+.tip-msg text {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0,0,0,.5);
+}
+.breeding-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.breeding-col {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.breeding-col text {
+  color: rgba(0,0,0,.5);
+  font-weight: bold;
+  padding-right: 5px;
+  height: 38px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+}
+.breeding-col input, .breeding-data, .check-data, .breeding-type, .location {
+  width: 280px;
+  height: 38px;
+  background-color: #FFF;
+  border-radius: 5px;
+}
+.operate-btn {
+  width: 90%;
+  margin: 40px auto;
+  
+}
+.save-btn, .cancel-btn, .delete-btn  {
+  padding: 3px;
+  font-size: 16px;
+}
+.save-btn {
+  background-color: #34917e;
+  color: #FFF;
+}
+.cancel-btn {
+  margin-top: 20px;
+  border: 1px solid #34917e;
+  color: #34917e;
+}
+.delete-btn {
+  margin-top: 20px;
+  border: 1px solid maroon;
+  color: maroon;
+}
+.picker {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 10px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+}
+.icon-jiantou2 {
+  font-size: 14px;
+  padding-left: 4px;
+  color: #34917e;
+}
+.location text {
+  float: right;
+  line-height: 38px;
+}

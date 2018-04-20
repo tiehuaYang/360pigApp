@@ -1,0 +1,36 @@
+/* pages/supplierManage/supplierManage.wxss */
+@import '../pigs/pigs.wxss';
+.supplier-content {
+  height: 100%;
+  box-sizing: border-box;
+  background: #f8f8f8;
+}
+.pigs-section1 {
+  margin-bottom: 10px;
+}
+.top-btn-group {
+  width: 60px;
+  display: flex;
+}
+.piggery {
+  background-color: #FFF;
+  
+  display: flex;
+  flex-direction: column;
+}
+.dorm {
+  
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.dorm-txt {
+  float: left;
+  padding-left: 5%;
+}
+.icon-bianji {
+  padding-right: 5%;
+  float: right;
+  font-size: 18px;
+  font-weight: 600;
+  color: #34917e;
+}

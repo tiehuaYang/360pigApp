@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<excel id="order" code="order" name="商品信息导出">
+	<colgroup>
+		<col index="A" width='17em'></col>
+		<col index="B" width='17em'></col>
+		<col index="C" width='17em'></col>
+		<col index="D" width='17em'></col>
+		<col index="E" width='17em'></col>
+		<col index="F" width='17em'></col>
+		<col index="G" width='17em'></col>
+
+	</colgroup>
+	<title>
+		<tr height="16px">
+			<td rowspan="1" colspan="20" value="商品信息" />
+		</tr>
+	</title>
+	<thead>
+		<tr height="16px">
+			<th value="商品编码" />
+			<th value="商品名称" />
+			<th value="类别" />
+			<th value="单位" />
+			<th value="市场价" />
+			<th value="成本价" />
+			<th value="是否上架" />
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="16px" firstrow="2" firstcol="0" repeat="5">
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="string" isnullable="true" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="numeric" format="##0" isnullable="true" colspan="1" />
+			<td type="string" isnullable="true" />
+		</tr>
+	</tbody>
+
+</excel>

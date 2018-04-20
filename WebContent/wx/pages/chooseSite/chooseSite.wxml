@@ -1,0 +1,12 @@
+<!--pages/chooseSite/chooseSite.wxml-->
+<view class='site-choose-content'>
+  <view class='site-summary' wx:for="{{siteList}}" wx:key="farmId">
+    <text class='site-title'>{{item.farmName}}</text>
+    <text wx:if="{{item.createTime}}">创建时间：{{item.createTime}}</text>
+    <view>
+      <text>{{item.province}}</text>
+      <text class="farmManager">负责人：{{item.farmManager}}</text>
+    </view>
+    <view class="tapface" data-id="{{item.farmId}}" bindtap='selectedDefaultSite'></view>
+  </view>
+</view>

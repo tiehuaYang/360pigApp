@@ -1,0 +1,110 @@
+/* components/searchbar/searchbar.wxss */
+
+.searchbar-result {
+  height: 80px;
+  margin-top: 0;
+  font-size: 14px;
+  background-color: #fff;
+  position: absolute;
+  top: 38px;
+  left: 2px;
+  right: 2px;
+  z-index: 2;
+  box-shadow: 0px 1px 2px #888;
+  overflow: scroll;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-cell {
+  padding: 10px 15px 10px 35px;
+}
+
+.weui-search-bar-content {
+  background-color: #fff;
+  position: relative;
+}
+
+.weui-search-bar {
+  position: relative;
+  padding: 8px 0px;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.weui-icon-search {
+  margin-right: 8px;
+  font-size: inherit;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  flex: auto;
+  border-radius: 5px;
+  background: #fff;
+  border: 1rpx solid #e6e6ea;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #f8f8f8;
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+}
+
+.weui-icon-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 8px;
+  font-size: 0;
+}
+
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #9b9b9b;
+  background: #fff;
+  line-height: 28px;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09bb07;
+  white-space: nowrap;
+  font-size: 16px;
+  margin-top: 1px;
+}

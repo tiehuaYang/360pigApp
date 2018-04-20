@@ -1,0 +1,42 @@
+/* pages/createSite/createSite.wxss */
+.site-content {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: #F8F8F8;
+}
+.input-group-items {
+  padding: 10px 0 10px 10px;
+  background: #FFF;
+}
+.input-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 35px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #DDD;
+  margin-top: 10px;
+}
+.input-item.first {
+  margin: 0;
+}
+.input-item input,
+.input-item picker {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+.input-item>text {
+  width: 80px;
+}
+.comfirm-btn {
+  padding: 0 10px;
+  margin-top: 15px;
+}
+.comfirm-btn button {
+  background: #388bff;
+  color: #FFF;
+}
+.btn-active {
+  background: #34917e !important; 
+}

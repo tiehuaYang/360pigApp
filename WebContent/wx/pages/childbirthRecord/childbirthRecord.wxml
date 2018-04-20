@@ -1,0 +1,57 @@
+<!--pages/breedingRecord/breedingRecord.wxml-->
+<view class="breedingRecord-page">
+  <view class="pigs-section1">
+    <searchbar class="searchbar" id="searchbar" bind:searchHandleEvent="_searchPigs"></searchbar>
+    <view class='top-btn-group'>
+      <button class="filter-btn" bindtap='pigScreen'><text class="iconfont icon-shaixuan1"></text>筛选</button>
+      <button class="add-btn" bindtap='childbirth'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+
+  <view class="deliver-total">
+    <view class="extra-msg">
+      <text class="left-txt">母猪分娩汇总:</text>
+      <text class="right-txt">2018-03-20至2018-04-20</text>
+    </view>
+    <view class="extra-txt">
+      <text>分娩6窝，总仔数量30只，其中健仔30只，弱仔0只，畸形0只，死胎0只，木乃伊0只，总仔12只</text>
+    </view>
+  </view>
+
+  <view class="deliverSection">
+    <view class="deliver-msg">
+      <view class="deliver-txt">
+        <view class="deliver-content">
+          <text>耳号：2018064021</text>
+          <text>分娩舍：30栋02栏</text>
+        </view>
+        <view class="deliver-content">
+          <text class="datea">日期：2018-04-20</text>
+          <text>总仔数：12</text>
+        </view>
+      </view>
+      <view class="deliver-txt2">
+        <view class="deliver-content2">
+          <text>健：12</text>
+          <text>死：0</text>
+        </view>
+        <view class="deliver-content2">
+          <text>弱：0</text>
+          <text>木：0</text>
+        </view>
+        <view class="deliver-content2">
+          <text>畸：0</text>
+          <text>窝重：0</text>
+        </view>
+        <view class="deliver-content2">
+          <text>活仔：12</text>
+          <text>母仔：6</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="deliver-btn" bindtap='childbirth'>
+      <text class="iconfont icon-bianji1"></text>
+    </view>
+  </view>
+</view>

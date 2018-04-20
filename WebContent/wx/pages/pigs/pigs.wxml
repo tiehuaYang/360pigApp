@@ -1,0 +1,61 @@
+<!--pages/pigs/pigs.wxml-->
+<view class="pigs-content">
+  <view class="pigs-section1">
+    <searchbar class="searchbar" id="searchbar" bind:searchHandleEvent="_searchPigs"></searchbar>
+    <view class='top-btn-group'>
+      <button class="filter-btn" bindtap='screen'><text class="iconfont icon-shaixuan1"></text>筛选</button>
+      <button class="add-btn" bindtap='addPig'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+  <view class="pig-total">
+    <text>总数 {{countPig}}</text>
+  </view>
+  
+  <view class='pigs-item {{index?"":"first"}}' wx:for="{{pigsList}}" wx:for-item="items" wx:key="pigsId">
+    <view class='item item1'>
+      <text class='number'>{{items.earTag}}</text>
+      <text class='pig-state-btn'>
+        <text class='state'>{{states[items.state-1]}}</text>
+        <text>{{items.dayCount}}</text>
+      </text>
+    </view>
+    <view class='item item2'>
+      <text class='new-dy'>
+        <text class='right-tips'>最新动态： </text>
+        <text>{{pigsEvent[items.lastEvent-1]}}</text>
+      </text>
+      <text class='child-time'>
+        <text class='right-tips'>胎次： </text>
+        <text>{{items.childbirthTimes}}</text>
+      </text>
+      <text class='more-btn' bindtap='showMore' data-index="{{index}}" >更多<text class="i iconfont {{items.showMore?'icon-shuangjiantouyou-copy':'icon-shuangjiantouyou'}}"></text>
+      </text>
+    </view>
+    <view wx:if="{{items.showMore}}">
+      <!--<view class='item item3'>
+        <text class=''>
+          <text class='right-tips'>耳缺号：</text>
+          <text>000001</text>
+        </text>
+        <text class='build-in'>
+          <text class='right-tips'>所在栋： </text>
+          <text>测试舍01</text>
+        </text>
+      </view>-->
+      <view class='item item4'>
+        <text class=''>
+          <text class='right-tips'>入场日期：</text>
+          <text>{{items.admissionDate}}</text>
+        </text>
+        <text class='build-in'>
+          <text class='right-tips'>所在舍： </text>
+          <text>{{items.farmPenVO.penName}}</text>
+        </text>
+      </view>
+      <view class='item item-btn'>
+        <button size="mini" data-pigid="{{items.pigsId}}" bindtap='getPig'>基本信息</button>
+        <button size="mini">繁殖信息</button>
+      </view>
+    </view>
+  </view>
+</view>

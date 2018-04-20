@@ -1,0 +1,41 @@
+<!--pages/deathRecord/deathRecord.wxml-->
+<view class="deathRecord-page">
+  <view class="pigs-section1">
+    <searchbar class="searchbar" id="searchbar" bind:searchHandleEvent="_searchPigs"></searchbar>
+    <view class='top-btn-group'>
+      <button class="filter-btn" bindtap='pigScreen'><text class="iconfont icon-shaixuan1"></text>筛选</button>
+      <button class="add-btn" bindtap='deathAdd'><text class="iconfont icon-webicon310"></text>添加</button>
+    </view>
+  </view>
+
+  <view class="deliver-total">
+    <view class="extra-msg">
+      <text class="left-txt">死淘汇总:</text>
+      <text class="right-txt">2018-03-20至2018-04-20</text>
+    </view>
+    <view class="extra-txt">
+      <text>死淘1头，其中死亡0头，淘汰1头。</text>
+    </view>
+  </view>
+
+  <view class="death-detail">
+    <view class="death-msg">
+      <view class="death-txt">
+        <view class="death-left">
+          <text>耳号：BIGPIG1002</text>
+          <text>猪舍：30栋02舍</text>
+          <text>死淘原因：长期不发情</text>
+        </view>
+        <view class="death-right">
+          <text class="date-txt">日期：2018-04-20</text>
+          <text>死亡类型：淘汰</text>
+        </view>
+      </view>
+      <view class="death-btn" bindtap="deathAdd">
+        <view class="btn-txt">
+          <text class="iconfont icon-bianji1"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

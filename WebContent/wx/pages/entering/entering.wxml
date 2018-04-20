@@ -1,0 +1,38 @@
+<!--pages/entering/entering.wxml-->
+<view class="containers">
+  <view class="content">
+
+    <view class="pic-section">
+      <image src='../../images/zhu.jpg' class="pig-pic"></image>
+    </view>
+
+    <view class="content-section">
+      <view class='enter-item'>
+        <view class='enter-icon' bindtap="breedingRecord">
+          <image src='../../images/icon_01.png'></image>
+          <text>母猪配种</text>
+        </view>
+        <view class='enter-icon' bindtap="gestation">
+          <image src='../../images/icon_02.png'></image>
+          <text>母猪妊娠</text>
+        </view>
+        <view class='enter-icon' bindtap="childbirthRecord">
+          <image src='../../images/icon_03.png'></image>
+          <text>母猪分娩</text>
+        </view>
+        <view class='enter-icon'>
+          <image src='../../images/icon_04.png'></image>
+          <text>断奶</text>
+        </view>
+        <view class='enter-icon'>
+          <image src='../../images/icon_05.png'></image>
+          <text>采精</text>
+        </view>
+        <view class='enter-icon' bindtap="deathRecord">
+          <image src='../../images/icon_06.png'></image>
+          <text>死淘</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

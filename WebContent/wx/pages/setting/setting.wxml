@@ -1,0 +1,100 @@
+<view class="setting-page">
+  <!--<view class="page-head">
+    <view class="head-central">
+      <view><image src="../../images/head.png" class="head-pic"></image></view>
+      <view class="head-txt">
+        <text class="person-name">{{userInfo.userName}}</text>
+        <text class="person-role">技术人员</text>
+      </view>
+    </view>
+  </view>-->
+  <view class="page-head">
+    <view class="customer-msg">
+      
+      <view class="customer-txt">
+        <view><image src="../../images/head.png" class="head-pic"></image></view>
+        <view class="txt-msg">
+          <text class="person-name">{{userInfo.userName}}</text>
+          <text class="person-phone">18878852763</text>
+          <text class="pig-num">猪只存栏：3200{{}}</text>
+          <text class="firm-address">广州省广州市天河区XXXX</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page-set">
+    
+    <view class="setting-section1">
+      <view class="setting-item" bindtap="actionSheetTap">
+        <view class="item-left">
+          <text class="iconfont icon-config-account"></text>
+          <text>账号管理</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+        </view>
+      </view>
+      <view class="setting-item" bindtap="getSupplier">
+        <view class="item-left">
+          <text class="iconfont icon-gongyingshangguanli"></text>
+          <text>供应商</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+        </view>
+      </view>
+      <view class="setting-item" bindtap="getSupplier">
+        <view class="item-left">
+          <text class="iconfont icon-kefu"></text>
+          <text>联系客服</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+        </view>
+      </view>
+    </view>
+
+    <view class="setting-section2">
+      <view class="setting-item" bindtap='siteManage'>      
+        <view class="item-left">
+          <text class="iconfont icon-baocun"></text>
+          <text>猪场管理</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+          <text class="own-badge" wx:if="{{notDefaultSite}}"></text>
+        </view>
+      </view>
+
+      <view class="setting-item" bindtap="materialManage">
+        <view class="item-left">
+          <text class="iconfont icon-icon-p_wuliaozu"></text>
+          <text>物料管理</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+        </view>
+      </view>
+    </view>
+
+    <view class="setting-section3">
+      <view class="setting-item">
+        <view class="item-left">
+          <text class="iconfont icon-guanyuwomen"></text>
+          <text>关于我们</text>
+        </view>
+        <view class="item-right">
+          <text class="iconfont icon-arrowright"></text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+      <block wx:for-items="{{actionSheetItems}}" wx:key="menu">
+          <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+      </block>
+      <action-sheet-cancel class="cancel">关闭</action-sheet-cancel>
+  </action-sheet>
+</view>

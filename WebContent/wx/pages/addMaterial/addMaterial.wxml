@@ -1,0 +1,32 @@
+<!--pages/addMaterial/addMaterial.wxml-->
+<view class='site-content'>
+<view class='input-group-items'>
+  <view class='input-item first'>
+    <text>{{name}}</text><!-- 物料名称 -->
+    <input id="goodName" type='text' placeholder="填写名称" value="{{inputData.goodName}}" focus="true" maxlength='15' bindinput="inputHandle"></input>
+  </view>
+  <view class='input-item' wx:if="{{itemView}}">
+    <text>{{feedPhaseORfeedType}}</text><!-- 物料类型/饲料阶段 -->
+    <picker bindchange="stageORTypeChange" value="{{stageORTypeIndex}}" range="{{stageORType}}">
+      <view class="picker">{{stageORType[stageORTypeIndex]}}</view>
+    </picker>
+  </view>
+  <view class='input-item' wx:if="{{itemView}}">
+    <text>猪只类型</text><!-- 猪只类型 -->
+    <picker bindchange="pigTypeChange" value="{{pigTypeIndex}}" range="{{pigType}}">
+      <view class="picker">{{pigType[pigTypeIndex]}}</view>
+    </picker>
+  </view>
+  <view class='input-item'>
+    <text>供应商</text>
+    <picker bindchange="supplierChange" value="{{supplierIndex}}" range-key="supplierName" range="{{supplier}}">
+      <view class="picker">{{supplier[supplierIndex].supplierName || "选择供应商"}}</view>
+    </picker>
+  </view>
+</view>
+<view class="comfirm-btn">
+  <button hover-class="btn-active" bindtap='newSupplier'>保存</button>
+  <button hover-class="delbtn-active" bindtap='delMaterial' class="del-btn" wx:if="{{editmaterialId}}">删除</button>
+</view>
+</view>
+

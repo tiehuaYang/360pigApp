@@ -1,0 +1,31 @@
+/* pages/addSupplier/addSupplier.wxss */
+@import '../createSite/createSite.wxss';
+.item-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.item-options text.actived{
+  color: #2d78f4;
+  border: 1px solid #34917e;
+}
+.item-options text {
+  background: #fff; 
+  padding: 0px 10px;
+  color: #969696;
+  border: 1px solid #969696;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.comfirm-btn button.del-btn {
+  margin-top: 10px;
+  background: #e74c3c;
+}
+.delbtn-active {
+  opacity: 0.8;
+}
+.input-item>text {
+  width: 100px;
+}
